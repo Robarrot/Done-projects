@@ -1,0 +1,17 @@
+import pandas as pd
+
+# Data to be saved
+data = {
+    'Name': [],
+    'Sex': [],
+    'RegNo': [],
+    'Faculty': [],
+    'Password': []
+}
+# Create a DataFrame
+df = pd.DataFrame(data)
+# File path
+file_path = 'database/voterList.csv'
+# Save the DataFrame to a CSV file
+df.to_csv(file_path, index=False)
+print(f"The file {file_path} has been created with column headers.")
